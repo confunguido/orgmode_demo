@@ -1,0 +1,74 @@
+
+R version 3.5.1 (2018-07-02) -- "Feather Spray"
+Copyright (C) 2018 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin15.6.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+> ##===========================================================================#
+> ## Author: Guido Espana & Alex Perkins
+> ##===========================================================================#
+> ## user input ---------------
+> ##===========================================================================#
+> rm(list = ls())
+> library(RColorBrewer)
+> library(tidyverse)
+── Attaching packages ─────────────────────────────────────── tidyverse 1.2.1 ──
+✔ ggplot2 3.1.0       ✔ purrr   0.2.5  
+✔ tibble  2.1.1       ✔ dplyr   0.8.0.1
+✔ tidyr   0.8.2       ✔ stringr 1.3.1  
+✔ readr   1.1.1       ✔ forcats 0.3.0  
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+Warning messages:
+1: package ‘tibble’ was built under R version 3.5.2 
+2: package ‘dplyr’ was built under R version 3.5.2 
+> library(grDevices)
+> 
+> icer_data = read_csv("../output/report_table_cost_effectiveness_QALY.csv")
+Parsed with column specification:
+cols(
+  vaccine_cost = col_integer(),
+  gdp = col_double(),
+  BothHigh = col_double(),
+  LowSensitivity = col_double(),
+  LowSpecificity = col_double()
+)
+> 
+> jpeg('../figures/report_figure_ICER.jpeg',
++      width=5,height=5,units='in',res=300)
+> plot(icer_data$vaccine_cost, icer_data$BothHigh, type = "l", col = "black",
++      main = "Cost-effectiveness", ylab = "ICER", xlab = "Vaccine (USD)",
++      ylim = c(0,3*icer_data$gdp[1]))
+> lines(icer_data$vaccine_cost, icer_data$LowSensitivity, type = "l", col = "red")
+> lines(icer_data$vaccine_cost, icer_data$LowSpecificity, type = "l", col = "blue")
+> abline(h = icer_data$gdp[1], col = "black")
+> abline(h = 3*icer_data$gdp[1], col = "black")
+> abline(h = 0, col = "black")
+> legend(x = 0, y = 3* 0.9 * icer_data$gdp[1],
++        legend = c("Baseline",
++                   "Low Sensitivity",
++                   "Low Specificity"),
++        col = c("black","red","blue"), lty = c(1,1))
+> dev.off()
+null device 
+          1 
+> 
+> proc.time()
+   user  system elapsed 
+   1.22    0.15    1.54 
