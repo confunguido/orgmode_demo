@@ -5,12 +5,12 @@
                      '(("article" "11pt")))
    (TeX-add-to-alist 'LaTeX-provided-package-options
                      '(("inputenc" "utf8") ("fontenc" "T1") ("ulem" "normalem")))
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "path")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "url")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "nolinkurl")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperbaseurl")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperimage")
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperref")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperimage")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperbaseurl")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "nolinkurl")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "url")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "path")
    (add-to-list 'LaTeX-verbatim-macros-with-delims-local "path")
    (TeX-run-style-hooks
     "latex2e"
@@ -36,19 +36,19 @@
     '("R" 1))
    (LaTeX-add-labels
     "#1"
-    "sec:orgc62d1d8"
-    "sec:orgd5a8fc2"
+    "sec:orgcd02ace"
+    "sec:orgec99251"
     "tbl-costs"
     "eq-ICER"
-    "sec:orgd3d5b14"
-    "sec:org2e2df3b"
+    "sec:org73cde39"
+    "sec:org3968e12"
     "fig-epi-benefits"
-    "sec:org8a0cfcf"
+    "sec:org1753f5e"
     "fig-ICER"
-    "sec:org3b84392"
+    "sec:orgf1237fe"
     "fig-tornado"
     "table-tornado"
-    "sec:org6a13bc5")
+    "sec:org4812a88")
    (LaTeX-add-bibliographies
     "Guido_Postdoc_Literature"))
  :latex)

@@ -1,4 +1,4 @@
-% Created 2019-04-21 Sun 21:11
+% Created 2019-04-23 Tue 15:22
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -33,13 +33,12 @@
 
 \maketitle
 \linenumbers
-
 \section{Introduction}
-\label{sec:orgc62d1d8}
+\label{sec:orgcd02ace}
 Individuals who are seronegative at vaccination with CYD-TDV have an increased risk of severe dengue in their first dengue virus (DENV) infection \cite{Sridhar2018}. The World Health Organization (WHO) recommends a pre-vaccination screening to ensure that only those with previous exposure to DENV are vaccinated \cite{WHO2018}. However, rapid diagnostic tests with high sensitivity and specificity are not currently available. We have previously discussed the benefits and cost-effectiveness of pre-screening vaccination for economic scenarios of the Philippines and Brazil \cite{Espana2019Biorxiv}. Here, we discuss the implications of this strategy for Puerto Rico in terms of epidemiological benefits and cost-effectiveness.
 
 \section{Methods}
-\label{sec:orgd5a8fc2}
+\label{sec:orgec99251}
 Based on estimates from 2002 to 2010 \cite{Halasa2012}, we updated our assumptions of treatment of dengue for ambulatory cases and hospitalizations. Using the consumer price index for Puerto Rico, we projected these costs to 2019 USD. Similarly, we took the GDP per-capita for Puerto Rico in 2016 \cite{worldbank2016} and projected it's value to 2019. 
 
 \begin{table}[htbp]
@@ -57,9 +56,6 @@ GDP per-Capita & 30,833 (2016) & 30,833\\
 \end{tabular}
 \end{table}
 
-
-
-
 We then calculated the Incremental Cost-Effectiveness Ratio (ICER) as in equation \ref{eq-ICER}. \R{Rev1Com2} As others have \cite{shim2017,shim2017b,flasche2016}, we deemed the intervention cost-effective if the ICER was below 3 GDP per-Capita, and very cost-effective if the ICER fell below 1 GDP per-Capita. We assumed a baseline scenario of costs.
 
 \begin{equation}
@@ -71,9 +67,9 @@ We then calculated the Incremental Cost-Effectiveness Ratio (ICER) as in equatio
 \R{Rev1Com3-1}Estimates of seroprevalence in Puerto Rico indicate that prevalence in 9-year-olds is around 50\%. Coudeville et al. estimated 50\% of prevalence  in 9-year-olds \cite{Coudeville2016} in the clinical trial sites. According to Argüello, 49.8\% of participants between 10-18 years of age had a positive IgG anti-DENV antibodies \cite{arguello2015AJTMH}. Hence, we assume that the seroprevalence in 9-year-olds is around 50\% but estimate the sensitivity of our analysis from 25\% to 75\%\R{Rev1Com3-2}. 
 
 \section{Results}
-\label{sec:orgd3d5b14}
+\label{sec:org73cde39}
 \subsection{Epidemiological benefits from vaccination}
-\label{sec:org2e2df3b}
+\label{sec:org3968e12}
 The benefits are outlined in Fig. \ref{fig-epi-benefits}. At \(PE_9 = 0.5\) there are several scenarios where the vaccine is beneficial from the public health perspective. 
 
 \begin{figure}[htbp]
@@ -84,7 +80,7 @@ The benefits are outlined in Fig. \ref{fig-epi-benefits}. At \(PE_9 = 0.5\) ther
 \end{figure}
 
 \subsection{Cost-effectiveness of pre-vaccination screening strategies}
-\label{sec:org8a0cfcf}
+\label{sec:org1753f5e}
 Out cost-effectiveness analysis suggests that the intervention would be cost-effective in Puerto Rico at the assumed price of the vaccine (70 USD) (Fig. \ref{fig-ICER}). Below 200 USD per fully vaccinated person, pre-vaccination screening would be cost-effective from a public payer perspective (ICER < 3 GDP per Capita). Very cost-effective scenarios could be achieved with a vaccine price below 95 USD per vaccinated individual. Also, at 18 USD per vaccinated individual, the costs of the intervention are equal to the costs without intervention (ICER = 0). Nonetheless, these cost-effectiveness thresholds depend on our assumptions of specificity and sensitivity of screening. 
 
 \begin{figure}[htbp]
@@ -95,7 +91,7 @@ ICER or pre-vaccination screening strategy in Puerto Rico at different cost of v
 \end{figure}
 
 \subsection{Tornado diagram and sensitivity analysis}
-\label{sec:org3b84392}
+\label{sec:orgf1237fe}
 We varied the baseline value of five parameters of the cost-effectiveness analysis: sensitivity, specificity, PE9, vaccine cost for a fully vaccinated individual, and screening unit cost. The ranges of the parameter values are summarized in table \ref{table-tornado}. This sensitivity analysis shows that the specificity of the test greatly affects the cost-effectiveness of the intervention. 
 
 \begin{figure}[htbp]
@@ -105,8 +101,9 @@ We varied the baseline value of five parameters of the cost-effectiveness analys
 Tornado diagram for ICER of pre-vaccination screening strategy in Puerto Rico}
 \end{figure}
 
-% latex table generated in R 3.5.3 by xtable 1.8-3 package
-% Sun Apr 21 21:11:02 2019
+
+% latex table generated in R 3.5.1 by xtable 1.8-2 package
+% Tue Apr 23 15:22:27 2019
 \begin{table}[ht]
 \centering
 \begin{tabular}{lrrrrrr}
@@ -125,7 +122,7 @@ Sensitivity & 0.50 & 1.00 & 32622.40 & 18452.13 & 22012.70 & 31364.60 \\
 \end{table}
 
 \section{Discussion}
-\label{sec:org6a13bc5}
+\label{sec:org4812a88}
 Assuming a moderate transmission intensity in Puerto Rico, we found that this intervention could be beneficial from the public health and individual perspective, conditioned to moderate values of sensitivity and high values of specificity. Compared to our previous simulation analysis for the Philippines and Brazil \cite{Espana2019Biorxiv}, the main differences of this analysis are the costs of treatment of dengue fever and severe dengue cases, which are based on studies from 2010. More updated estimates of this type of costs would refine the estimates of cost-effectiveness of p re-vaccination screening with CYD-TDV in Puerto Rico. 
 
 \bibliographystyle{vancouver}
